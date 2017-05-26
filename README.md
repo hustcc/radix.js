@@ -1,6 +1,6 @@
 # [Radix.js](http://git.hust.cc/radix.js)
 
-> **Radix.js** is a simple javascript module to convent number to 2~64 radix, **decimal supported**.
+> **Radix.js** is a simple javascript module to convent number to 2-64 radix, **decimal supported**. 一个用于数字进制转换的 JavaScript 模块，默认支持 2-64 进制（可自定义），支持**小数的进制转化**。
 
 [![Build Status](https://travis-ci.org/hustcc/radix.js.svg?branch=master)](https://travis-ci.org/hustcc/radix.js) [![Coverage Status](https://coveralls.io/repos/github/hustcc/radix.js/badge.svg?branch=master)](https://coveralls.io/github/hustcc/radix.js?branch=master) [![npm](https://img.shields.io/npm/v/radix.js.svg?style=flat-square)](https://www.npmjs.com/package/radix.js) [![npm](https://img.shields.io/npm/dt/radix.js.svg?style=flat-square)](https://www.npmjs.com/package/radix.js) [![npm](https://img.shields.io/npm/l/radix.js.svg?style=flat-square)](https://www.npmjs.com/package/radix.js)
 
@@ -9,7 +9,7 @@
 
 > **npm install radix.js**
 
-Or download `dist/radix.min.js` source file。
+Or download `dist/radix.min.js` source file.
 
 
 # 2. Import It
@@ -42,7 +42,7 @@ radix.convent(5201314, 10, 64); // will convent number 5301314 from radix 10 to 
 Now the max radix is 64, and the formatter is: `0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ_@`. Also you can set your own formatter like below:
 
 ```js
-var radix = new Radix('0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz');
+var radix = new Radix('0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz!#');
 radix.convent('jRSy', 64);
 ```
 
