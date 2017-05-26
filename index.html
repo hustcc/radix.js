@@ -42,16 +42,27 @@
 		table thead {
 			font-weight: bold;
 		}
+
+		table {
+			border-right: 1px solid #f6dcd7;
+			border-bottom: 1px solid #f6dcd7;
+		}
+		table td {
+			border-left: 1px solid #f6dcd7;
+			border-top: 1px solid #f6dcd7;
+		}
 		table, td {
-			border: 1px solid #f6dcd7;
 			text-align: center;
 		}
-		table tr:hover, table thead tr {
+		table tbody tr:hover, table thead tr {
 			background-color: #f6dcd7;
+		}
+		table tbody tr {
+			line-height: 18px;
 		}
 	</style>
 </head>
-<body>
+
 <h1> Radix.js </h1>
 <p>
 	Project <a href="https://github.com/hustcc/radix.js">radix.js</a> is a simple javascript module to convent number to 2~64 radix, decimal supported.
@@ -78,7 +89,7 @@
 	<input type='button' onclick='javascript:conventRadix()' value='Convent it' />
 </form>
 
-<table>
+<table border="0" cellspacing="0" cellpadding="0">
 	<thead>
 		<td>转化进制（radix）</td>
 		<td>进制数（radix value）</td>
@@ -89,23 +100,25 @@
 </table>
 
 <h2> Install </h2>
-<pre class="strong">
-npm install radix.js </pre>
+<pre class="strong">npm install radix.js </pre>
 <p> Then import it. </p>
 <pre>
 // import library use script tag.
 &lt;script type="text/javascript" src="dist/radix.min.js"&gt;&lt;/script&gt;
 
 // or ES6 style.
-const Radix = require('radix.js');</pre>
+const Radix = require('radix.js');
 
 // or
 import Radix from 'radix.js';
+</pre>
+
 <h2>Usage</h2>
 <pre>
 var radix = new Radix();
 radix.convent(5201314, 10, 64); // will convent number 5301314 from radix 10 to radix 64.
-  </pre>
+</pre>
+
 <hr />
 
 <p>

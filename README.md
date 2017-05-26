@@ -2,7 +2,7 @@
 
 > **Radix.js** is a simple javascript module to convent number to 2-64 radix, **decimal supported**. 一个用于数字进制转换的 JavaScript 模块，默认支持 2-64 进制（可自定义），支持**小数的进制转化**。
 
-[![Build Status](https://travis-ci.org/hustcc/radix.js.svg?branch=master)](https://travis-ci.org/hustcc/radix.js) [![Coverage Status](https://coveralls.io/repos/github/hustcc/radix.js/badge.svg?branch=master)](https://coveralls.io/github/hustcc/radix.js?branch=master) [![npm](https://img.shields.io/npm/v/radix.js.svg?style=flat-square)](https://www.npmjs.com/package/radix.js) [![npm](https://img.shields.io/npm/dt/radix.js.svg?style=flat-square)](https://www.npmjs.com/package/radix.js) [![npm](https://img.shields.io/npm/l/radix.js.svg?style=flat-square)](https://www.npmjs.com/package/radix.js)
+[![Build Status](https://travis-ci.org/hustcc/radix.js.svg?branch=master)](https://travis-ci.org/hustcc/radix.js) [![Coverage Status](https://coveralls.io/repos/github/hustcc/radix.js/badge.svg?branch=master)](https://coveralls.io/github/hustcc/radix.js?branch=master) [![npm](https://img.shields.io/npm/v/radix.js.svg)](https://www.npmjs.com/package/radix.js) [![npm](https://img.shields.io/npm/dt/radix.js.svg)](https://www.npmjs.com/package/radix.js) [![npm](https://img.shields.io/npm/l/radix.js.svg)](https://www.npmjs.com/package/radix.js)
 
 
 # 1. Install
