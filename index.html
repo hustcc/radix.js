@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>Radix.js is a simple javascript module to convent number to 2~64 radix, decimal supported.</title>
+	<meta name="keywords" content="radix, hexconvent, radix decimal" />
+	<meta name="description" content="a simple javascript module to convent number to 2~64 radix, decimal supported." />
+	<style type="text/css">
+		body {
+			max-width: 1000px;
+			margin: 0 auto;
+			width: 90%;
+		}
+		pre {
+			background-color: #f6dcd7;
+			padding: 10px 15px;
+			white-space: pre-wrap;
+			word-wrap: break-word;
+		}
+		pre.strong {
+			font-weight: bold;
+		}
+		form, form textarea {
+			width: 100%;
+		}
+
+		#number {
+			width: 50%;
+			min-width: 300px;
+		}
+		#radix {
+			max-width: 50px;
+			min-width: 40px;
+			width: 10%;
+		}
+		form {
+			margin: 20px 0;
+		}
+		table {
+			width: 100%;
+		}
+		table thead {
+			font-weight: bold;
+		}
+		table, td {
+			border: 1px solid #f6dcd7;
+			text-align: center;
+		}
+		table tr:hover, table thead tr {
+			background-color: #f6dcd7;
+		}
+	</style>
+</head>
+<body>
+<h1> Radix.js </h1>
+<p>
+	Project <a href="https://github.com/hustcc/radix.js">radix.js</a> is a simple javascript module to convent number to 2~64 radix, decimal supported.
+</p>
+<p>
+	项目 <a href="https://github.com/hustcc/radix.js">radix.js</a> 是一个 JavaScript 开发用于数字进制转换的库，支持 2~64 进制（或者自定义），支持小数的进制转化。
+</p>
+
+<script async src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- sorry for ad -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-7292810486004926"
+     data-ad-slot="7806394673"
+     data-ad-format="auto"></ins>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+<form>
+	要格式化的数字：
+	<input type='text' id='number' value='5201314' placeholder='Number to be convent' />
+	<input type='number' id='radix' value='10' placeholder='The radix of number.' />
+	<input type='button' onclick='javascript:conventRadix()' value='Convent it' />
+</form>
+
+<table>
+	<thead>
+		<td>转化进制（radix）</td>
+		<td>进制数（radix value）</td>
+	</thead>
+	<tbody id='result'>
+
+	</tbody>
+</table>
+
+<h2> Install </h2>
+<pre class="strong">
+npm install radix.js </pre>
+<p> Then import it. </p>
+<pre>
+// import library use script tag.
+&lt;script type="text/javascript" src="dist/radix.min.js"&gt;&lt;/script&gt;
+
+// or ES6 style.
+const Radix = require('radix.js');</pre>
+
+// or
+import Radix from 'radix.js';
+<h3>Usage</h3>
+<pre>
+var radix = new Radix();
+radix.convent(5201314, 10, 64); // will convent number 5301314 from radix 10 to radix 64.
+  </pre>
+<hr />
+
+<p>
+	The code of radix.js hosted on Github, click <a href="https://github.com/hustcc/radix.js">here</a>. Welcome to issue or pull request.
+</p>
+<script type="text/javascript" src="dist/radix.min.js"></script>
+<script type="text/javascript">
+  var radixInstance = new Radix();
+  function $_(id) {
+    return document.getElementById(id);
+  }
+  function conventRadix() {
+    var number = $_('number').value;
+    var radix = $_('radix').value;
+    var results = [];
+
+    for (var i = 2; i <= 64; i ++) {
+      results.push('<tr><td>' + i + '</td><td>' + radixInstance.convent(number, radix, i) + '</td></tr>');
+    }
+    $_('result').innerHTML = results.join('');
+  }
+  conventRadix();
+</script>
+</body>
+</html>

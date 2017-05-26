@@ -1,0 +1,68 @@
+{
+  "name": "radix.js",
+  "version": "0.0.1",
+  "description": "A simple javascript module to convent number to 2~64 radix, decimal supported.",
+  "main": "dist/radix.min.js",
+  "scripts": {
+    "test": "eslint src && jest",
+    "dev": "webpack --watch",
+    "cover": "jest --coverage",
+    "coveralls": "npm run cover && cat ./coverage/lcov.info | coveralls",
+    "build": "webpack && npm run test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hustcc/radix.js.git"
+  },
+  "keywords": [
+    "javascript",
+    "radix",
+    "hexconvent",
+    "radix64",
+    "radix decimal"
+  ],
+  "author": "hustcc",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hustcc/radix.js/issues"
+  },
+  "homepage": "https://github.com/hustcc/radix.js",
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-core": "^6.24.1",
+    "babel-eslint": "^7.2.3",
+    "babel-loader": "^7.0.0",
+    "babel-preset-env": "^1.5.1",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "coveralls": "^2.13.1",
+    "eslint": "^3.19.0",
+    "eslint-config-airbnb": "^15.0.1",
+    "eslint-config-airbnb-base": "^11.2.0",
+    "eslint-plugin-import": "^2.3.0",
+    "eslint-plugin-jsx-a11y": "^5.0.3",
+    "eslint-plugin-react": "^7.0.1",
+    "jest": "^20.0.4",
+    "webpack": "^2.6.0"
+  },
+  "jest": {
+    "testRegex": "(/__tests__/.*\\.(test|spec))\\.(ts|tsx|js)$",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "json"
+    ],
+    "collectCoverage": true,
+    "collectCoverageFrom": [
+      "src/*.{js,jsx}",
+      "!**/node_modules/**",
+      "!**/vendor/**"
+    ],
+    "moduleDirectories": [
+      "node_modules",
+      "src"
+    ]
+  }
+}
